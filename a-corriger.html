@@ -1,0 +1,31 @@
+<!-- 
+  1. Imbrication incorrecte (</p> avant </strong>) : Provoque une mauvaise interprétation de la structure par le navigateur et perturbe les lecteurs d'écran.
+  2. Balise <hr> à l'intérieur d'un paragraphe <p> : Une balise de bloc ne doit pas être imbriquée dans un paragraphe de texte.
+  3. Paragraphe non fermé (<p> ouvert à la ligne 6 mais fermé plus loin) : Casse la hiérarchie du document et fusionne des blocs de texte par erreur.
+  4. ID "info" dupliqué sur deux éléments différents : Un ID doit être unique dans tout le document, sinon les scripts JavaScript et les liens d'ancrage ne fonctionnent plus correctement.
+  5. Attribut non entre guignots (title=horaires du club) : L'espace vide fait croire au navigateur qu'il y a plusieurs attributs, ce qui invalide la syntaxe HTML.
+  6. Balise de fin </html> / </body> placée avant la fin du contenu : Le texte de fin de page et le pied de page se retrouvent "hors" de la structure HTML principale.
+  7. Absence de déclaration <!DOCTYPE html> au tout début : Le navigateur bascule en mode de compatibilité (quirks mode) au lieu du standard moderne.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Page à corriger</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <p>Bienvenue au <strong>club de code.</strong></p>
+
+        <p>Nos ateliers ont lieu le mercredi</p>
+
+        <hr>
+
+        <p>de 14 h à 17 h.</p>
+        <p id="salle">Salle B12</p>
+        <p id="info">Ouverts à tous les niveaux</p>
+        <p title="horaires du club">Entrée libre</p>
+        <p>Texte ajouté après la fin du document</p>
+        <p>Contact : club@tek-up.tn<br>Tél. : 70 000 000</p>
+    </body>
+</html>
+                                                                
